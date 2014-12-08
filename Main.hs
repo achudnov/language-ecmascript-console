@@ -12,5 +12,5 @@ main :: IO ()
 main = do src <- getContents
           case parse program "" src of
            Left err -> putStr $ "Error: " `append` (fromString $ show err)
-           Right js -> putStr "Parse successful"
+           Right js -> putStr $ fromString $ show js
           
